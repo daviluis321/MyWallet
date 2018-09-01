@@ -4,5 +4,14 @@ body{
 }
 
 .border {
-    border: 5px solid black !important;
+    border: 5px solid white !important;
 }
+
+.bgWallet{
+    background: #2E2F41;
+}
+
+.textWallet {
+    color: #9496A3 !important;
+  }
+
