@@ -50,7 +50,8 @@ body{
 }
 
 .btn-purple:hover{
-    background-color:#4B347F;
+	background-color:#4B347F;
+	color:white;
 }
   
 @media (max-width: 739px){
