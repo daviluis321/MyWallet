@@ -1,0 +1,8 @@
+
+body{
+    padding-top: 75px;
+}
+
+.border {
+    border: 5px solid black !important;
+}
