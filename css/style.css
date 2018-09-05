@@ -1,31 +1,24 @@
-
 body{
     padding-top: 75px;
 }
-
-.border {
+ .border {
     border: 5px solid white !important;
 }
-
-.bgWallet{
+ .bgWallet{
     background: #2E2F41;
 }
-
-.textWallet {
+ .textWallet {
     color: #9496A3 !important;
 }
-
-/*intro*/
-
-.intro{
+ /*intro*/
+ .intro{
 	background: url('../img/imgSlide.jpg') no-repeat center center;
 	background-size: cover; /*Sempre 100% */
 	padding: 70px 0;
 	text-align:center;
 	color:black;
 }
-
-.intro h1::after{
+ .intro h1::after{
 	content: '';
 	display:block;
 	width: 80px;
@@ -33,8 +26,7 @@ body{
 	background: #9064F6;
 	margin: 10px auto;
 }
-
-.intro h2::before{
+ .intro h2::before{
 	content: '';
 	display:block;
 	width: 80px;
@@ -42,28 +34,89 @@ body{
 	background: #9064F6;
 	margin: 10px auto;
 }
-
-.btn-purple {
+ .btn-purple {
     color: #fff;
     background-color: #9064F6;
     border-color: #9064F6;
 }
-
-.btn-purple:hover{
+ .btn-purple:hover{
 	background-color:#4B347F;
 	color:white;
 }
-
+  
+@media (max-width: 739px){
+	.intro{
+		padding: 60px 0;
+	}
+}
+ body{
+    padding-top: 75px;
+    background-color: #2E2F41;
+}
+ .border {
+    border: 5px solid white !important;
+}
+ .bgWallet{
+    background: #2E2F41;
+}
+ .textWallet {
+    color: #9496A3 !important;
+}
+ /*intro*/
+ .intro{
+	background: url('../img/imgSlide.jpg') no-repeat center center;
+	background-size: cover; /*Sempre 100% */
+	padding: 70px 0;
+	text-align:center;
+	color:black;
+}
+ .intro h1::after{
+	content: '';
+	display:block;
+	width: 80px;
+	height:4px;
+	background: #9064F6;
+	margin: 10px auto;
+}
+ .intro h2::before{
+	content: '';
+	display:block;
+	width: 80px;
+	height:4px;
+	background: #9064F6;
+	margin: 10px auto;
+}
+ .btn-purple {
+    color: #fff;
+    background-color: #9064F6;
+    border-color: #9064F6;
+}
+ .btn-purple:hover{
+	background-color:#4B347F;
+	color:white;
+}
+  
+@media (max-width: 739px){
+	.intro{
+		padding: 60px 0;
+	}
+}
+ .principal{
+	background: url('../img/principal.jpg') no-repeat center center;
+	background-size: cover; /*Sempre 100% */
+	padding: 100px;
+	text-align:center;
+	height: 270px;
+}
+ .btn-secondary{
+	opacity: 0.85;
+	font-weight: bold;
+	background-color: #9496a3;
+} 
 #mensagemc{
 	margin-top: 0px;
 	height: 120px;
 	resize: vertical;
 
-}
-
-@media (max-width: 739px){
-	.intro{
-		padding: 60px 0;
-	}
 }
 
