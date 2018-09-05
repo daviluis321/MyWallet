@@ -1,6 +1,7 @@
 
 body{
     padding-top: 75px;
+    background-color: #2E2F41;
 }
 
 .border {
@@ -60,3 +61,16 @@ body{
 	}
 }
 
+.principal{
+	background: url('../img/principal.jpg') no-repeat center center;
+	background-size: cover; /*Sempre 100% */
+	padding: 100px;
+	text-align:center;
+	height: 270px;
+}
+
+.btn-secondary{
+	opacity: 0.85;
+	font-weight: bold;
+	background-color: #9496a3;
+}
