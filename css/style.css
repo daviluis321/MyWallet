@@ -53,14 +53,7 @@ body{
 	background-color:#4B347F;
 	color:white;
 }
-
-#mensagemc{
-	margin-top: 0px;
-	height: 120px;
-	resize: vertical;
-
-}
-
+  
 @media (max-width: 739px){
 	.intro{
 		padding: 60px 0;
