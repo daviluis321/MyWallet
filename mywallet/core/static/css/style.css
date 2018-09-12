@@ -18,7 +18,15 @@ body{
 /*intro*/
 
 .intro{
-	background: url('../img/imgSlide.jpg') no-repeat center center;
+	background: url('../img/contato.jpg') no-repeat center center;
+	background-size: cover; /*Sempre 100% */
+	padding: 70px 0;
+	text-align:center;
+	color:black;
+}
+
+.introContato{
+	background: url('../img/contato.jpg') no-repeat center center;
 	background-size: cover; /*Sempre 100% */
 	padding: 70px 0;
 	text-align:center;
