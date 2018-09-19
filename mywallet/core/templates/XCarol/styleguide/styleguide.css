@@ -1,0 +1,38 @@
+/* Cores */
+.primaria-1 {
+	background: #FDFDFE ;
+}
+.primaria-2 {
+	background:  #2E2F41;
+}
+
+.primaria-3{
+	background:  #9064F6;
+}
+
+.primaria-4{
+	background:  #9496A3;
+}
+
+.primaria-5{
+	background: #9ED7D4;
+}
+
+.secundaria-1 {
+	background: ;
+}
+.secundaria-2 {
+	background: ;
+}
+.secundaria-3 {
+	background: ;
+}
+.btn-purple {
+    color: #fff;
+    background-color: #9064F6;
+    border-color: #9064F6;
+}
+
+.textWallet {
+    color: #9496A3 !important;
+}
