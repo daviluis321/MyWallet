@@ -8,6 +8,7 @@ class Usuario(models.Model):
 	email = models.EmailField(max_length=80, unique=True)
 
 class Investimento(models.Model):
+<<<<<<< HEAD
 	id_usuario 			= models.ForeignKey(Usuario, on_delete=models.CASCADE)
 	id_tipoInvestimento = models.ForeignKey(TipoInvestimento, on_delete=models.CASCADE)
 	capital    			= models.FloatField()
@@ -26,6 +27,20 @@ class Despesa(models.Model):
 
 class TipoDespesa(models.Model):
 	tipo = models.CharField(max_length=30)
+=======
+	id_usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+	capital    = models.FloatField()
+	tipo	   = models.CharField(max_length=30)
+	criacao    = models.DateField(auto_now=False, auto_now_add=False)
+	modeda     = models.CharField(max_length=10)
+
+class Despesa(models.Model):
+	id_usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+	custo      = models.FloatField()
+	tipo	   = models.CharField(max_length=30)
+	criacao    = models.DateField(auto_now=False, auto_now_add=False)
+	modeda     = models.CharField(max_length=10)
+>>>>>>> bf544fe006c41d77ae7327c9a26c266aa0cd1d63
 
 class Meta(models.Model):
 	id_usuario   = models.ForeignKey(Usuario, on_delete=models.CASCADE)
@@ -37,7 +52,24 @@ class Meta(models.Model):
 	descricao	 = models.CharField(max_length=200)
 
 class Fundo(models.Model):
+<<<<<<< HEAD
 	id_usuario   	= models.ForeignKey(Usuario, unique=True, on_delete=models.CASCADE)
 	id_investimento = models.ForeignKey(Investimento, on_delete=models.CASCADE)
 	id_despesa   	= models.ForeignKey(Despesa, on_delete=models.CASCADE)
 	saldo			= models.FloatField()
+=======
+	id_usuario   	= models.ForeignKey(Usuario, on_delete=models.CASCADE)
+	id_investimento = models.ForeignKey(Investimento, on_delete=models.CASCADE)
+	id_despesa   	= models.ForeignKey(Despesa, on_delete=models.CASCADE)
+	saldo			= models.FloatField()
+
+class GraficoMeta(models.Model):
+	id_usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+	id_meta    = models.ForeignKey(Meta, on_delete=models.CASCADE)
+	criacao	   = models.DateField(auto_now=False, auto_now_add=False)
+
+class GraficoFundo(models.Model):
+	id_usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+	id_fundo   = models.ForeignKey(Fundo, on_delete=models.CASCADE)
+	criacao	   = models.DateField(auto_now=False, auto_now_add=False)
+>>>>>>> bf544fe006c41d77ae7327c9a26c266aa0cd1d63
