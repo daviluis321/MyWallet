@@ -1,14 +1,20 @@
 <!DOCTYPE html>
+{% load static %}
+
 <html lang="pt-br">
 
 <head>
+
   <!-- Meta tags Obrigatórias -->
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/logincss.css'%}">
+  <script src="js/custom.js"></script>
   <title>MyWallet!</title>
 </head>
 
@@ -42,12 +48,41 @@
     </div>
   </nav>
 
-  <div class="principal">
-    <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-secondary">Meus Investimentos</button>
-      <button type="button" class="btn btn-secondary">Minhas Despesas</button>
-      <button type="button" class="btn btn-secondary">Meus Relatórios</button>
-      <button type="button" class="btn btn-secondary">Minhas Metas</button>
+  <br>
+
+  <br>
+  <div class="principal" id="unica">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-md-3 col-6">
+          <ul id="oi" class="list-unstyled">
+            <li>
+              <a href="planos.html">Meus Investimentos</a>
+            </li>
+            <li>
+              <a href="contato.html">Minhas dispesas</a>
+            </li>
+            <li>
+              <a href="inscricao.html">Meus Relatórios</a>
+            </li>
+            <li>
+              <a href="contato.html">Minhas Metas</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-1 col-2">
+        </div>
+        <div class="col-md-8 col-8">
+          <h1 id="nome">Nome da Pessoa</h1>
+          <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut</h4>
+          <h1 id="nome">Investimentos</h1>
+          <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut</h4>   
+        </div>
+      </div>
     </div>
   </div>
 
