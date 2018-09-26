@@ -18,3 +18,6 @@ def investimento(request):
 
 def despesa(request):
     return render(request, 'despesa.html')
+
+def qsomos(request):
+    return  render (request, 'qsomos.html')
