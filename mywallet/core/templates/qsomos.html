@@ -1,23 +1,25 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="pt-br">
 
 <head>
   <!-- Meta tags Obrigatórias -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/logincss.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/logincss.css'%}">
   <script src="js/custom.js"></script>
+  
   <title>MyWallet!</title>
 </head>
 
 <body>
 
   <nav class="navbar navbar-light bgWallet navbar-expand-md fixed-top py-3 shadow-sm">
-    <a href="index.html" class="navbar-brand font-weight-bold px-2 border border-dark text-white">
+    <a href="quem somos.html" class="navbar-brand font-weight-bold px-2 border border-dark text-white">
       MyWallet
     </a>
 
@@ -29,73 +31,39 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto ">
         <li class="nav-item ">
-          <a class="nav-link textWallet" href="planos.html">Quem somos</a>
+          <a class="nav-link textWallet" href="/qsomos">Quem somos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link textWallet" href="contato.html">Contato</a>
+          <a class="nav-link textWallet" href="/contato">Contato</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link textWallet" href="login.html" >Login</a>
+          <a class="nav-link textWallet" href="/login" >Login</a>
         </li>
         <li class="nav-item">
           <a class=" btn btn-outline-light ml-md-2 textWallet" href="inscricao.html">Cadastrar-se</a>
         </li>
       </ul>
     </div>
-  </nav>
-
-
-  <br>
-  <br>
-  <h1 class="text-center">Envie-nos uma mensagem!</h1>
-  <br>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="input-group">
-          <label class="input-group input-group-addon">
-            <b class="glyphicon glyphicon-user"></b>
-          </label>
-          <input autofocus type="text" class="form-control" id="nomec" placeholder="Nome (Ex: João)">
-        </div>
-      </div>
-    </div>
-    <br>
-
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="input-group">
-          <label class="input-group input-group-addon">
-            <b class="glyphicon glyphicon-user"></b>
-          </label>
-
-          <input autofocus type="email" class="form-control" id="emailc" placeholder="Email (Ex: joao@email.com)">
-        </div>
-      </div>
-    </div>
-    <br>
-
-    <div class="row justify-content-center">
-      <div class="col-md-6 ">
-        <div class="input-group">
-          <label class="input-group input-group-addon">
-            <b class="glyphicon glyphicon-log-in"></b>
-          </label>
-          <textarea type="text" required="required" class="form-control" id="mensagemc" placeholder="Insira aqui a sua mensagem"></textarea>
-        </div>
-      </div>
-    </div>
-    <br><br>
-
-    <div class="row justify-content-center">
-      <div class="col-md-6 text-center">
-        <button type="button" class="btn btn-purple btn-lg  mx-2 px-5 py-1">Enviar</button>
-      </div>
-    </div>
-
-    <br>
-  </div>
-
+  </nav>  
+   <br>
+  <section class="container">
+        
+          <h2 class="textWallet" type="title">Quem somos</h2><br>
+                <p>A MyWallet é uma empresa especializada em finanças e atua no mercado financeiro com o objetivo de 
+                  facilitar a vida do investidor. Atuamos com gerenciamento de despesas e investimentos para que o usuário tenha 
+                  maior controle e organização de seu patrimônio. Nossa empresa possui
+                abrangencia nacional, através dos próprios parceiros.</p>
+            <h2 class="textWallet" type="title">Nossos princípios</h2><br>
+          <h4 class="textWallet" type="title">Missão</h4><br>
+                <p>Nossa missão consiste fornecer controle, organização e segurança aos nossos clientes.</p>
+          <h4 class="textWallet" type="title">Visão</h4><br>
+              <p>Ser referência nacional em controle e gerenciamento de finanças.</p>
+          <h4 class="textWallet" type="title">Valores</h4><br>
+          <i style="font-size:24px" class="fa">&#xf2b5;</i><p>Confiabilidade</p>
+          <i style="font-size:24px" class="fa">&#xf201;</i><p>Visão de futuro</p>
+          <i style="font-size:24px" class="fa">&#xf044;</i><p>Organização</p>
+  </section>
+ 
   <footer class="bgWallet text-white">
     <div class="container py-4">
       <div class="row">
@@ -109,10 +77,10 @@
               <a href="contato.html">Contato</a>
             </li>
             <li>
-              <a href="inscricao.html">Cadastre-se</a>
+              <a href="inscricao.html">Cadastra-se</a>
             </li>
             <li>
-              <a href="login.html">Login</a>
+              <a href="contato.html">Login</a>
             </li>
           </ul>
         </div>
@@ -120,7 +88,7 @@
           <h4>Patrocínio</h4>
           <ul class="list-unstyled">
             <li class="textWallet">
-              <a href="index.html">Seja um dos nossos patrocinadores</a>
+              Seja um dos nossos patrocinadores
             </li>
           </ul>
         </div>
@@ -129,7 +97,7 @@
           <ul class="list-unstyled textWallet">
             <li>mywallet@gmail.com</li>
             <li>(87)99113-9442</li>
-            <li>De Seg a Sex das 8h as 18h</li>
+            <li>De Seg a Sext das 8h as 18h</li>
           </ul>
         </div>
         <div class="col-md-2">

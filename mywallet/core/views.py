@@ -9,3 +9,15 @@ def login(request):
 
 def contato(request):
     return render(request, 'contato.html')
+
+def main(request):
+    return render(request, 'main.html')
+
+def investimento(request):
+    return render(request, 'investimento.html')
+
+def despesa(request):
+    return render(request, 'despesa.html')
+
+def qsomos(request):
+    return  render (request, 'qsomos.html')
