@@ -15,3 +15,6 @@ def main(request):
 
 def investimento(request):
     return render(request, 'investimento.html')
+
+def despesa(request):
+    return render(request, 'despesa.html')
