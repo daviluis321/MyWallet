@@ -8,19 +8,19 @@ class Usuario(models.Model):
 	email = models.EmailField(max_length=80, unique=True)
 
 	def __str__(self):
-        return self.name
+		return self.name
 
 class TipoInvestimento(models.Model):
 	tipo = models.CharField(max_length=30)
 
 	def __str__(self):
-        return self.name
+		return self.name
 
 class Moeda(models.Model):
 	nome = models.CharField(max_length=10)
 
 	def __str__(self):
-        return self.name
+		return self.name
 
 class Investimento(models.Model):
 	id_usuario 			= models.ForeignKey(Usuario, on_delete=models.CASCADE)
@@ -30,13 +30,13 @@ class Investimento(models.Model):
 	criacao    			= models.DateField(auto_now=False, auto_now_add=False)
 
 	def __str__(self):
-        return self.name
+		return self.name
 
 class TipoDespesa(models.Model):
 	tipo = models.CharField(max_length=30)
 
 	def __str__(self):
-        return self.name
+		return self.name
 
 class Despesa(models.Model):
 	id_usuario	   = models.ForeignKey(Usuario, on_delete=models.CASCADE)
@@ -46,7 +46,7 @@ class Despesa(models.Model):
 	criacao    	   = models.DateField(auto_now=False, auto_now_add=False)
 
 	def __str__(self):
-        return self.name
+		return self.name
 
 
 
@@ -60,7 +60,7 @@ class Meta(models.Model):
 	descricao	 = models.CharField(max_length=200)
 
 	def __str__(self):
-        return self.name
+		return self.name
 
 class Fundo(models.Model):
 	id_usuario   	= models.ForeignKey(Usuario, unique=True, on_delete=models.CASCADE)
@@ -68,4 +68,4 @@ class Fundo(models.Model):
 	id_despesa   	= models.ForeignKey(Despesa, on_delete=models.CASCADE)
 	saldo			= models.FloatField()
 	def __str__(self):
-        return self.name
+		return self.name
