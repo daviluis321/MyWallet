@@ -11,10 +11,10 @@ class TipoInvestimento(models.Model):
 	tipo = models.CharField(max_length=30)
 
 class Moeda(models.Model):
-	nome = models.CharField(max_length=10)
+	nome = models.CharField(max_length=10,blank=True, default='DEFAULT VALUE')
 
 class Investimento(models.Model):
-	id_usuario 			= models.ForeignKey(Usuario, on_delete=models.CASCADE)
+	id_usuario 			= models.ForeignKey(Usuario, on_delete=models.CASCADE,)
 	id_tipoInvestimento = models.ForeignKey(TipoInvestimento, on_delete=models.CASCADE)
 	id_moeda			= models.ForeignKey(Moeda, on_delete=models.CASCADE)
 	capital    			= models.FloatField()
@@ -42,7 +42,7 @@ class Meta(models.Model):
 	descricao	 = models.CharField(max_length=200)
 
 class Fundo(models.Model):
-	id_usuario   	= models.ForeignKey(Usuario, unique=True, on_delete=models.CASCADE)
+	id_usuario   	= models.ForeignKey(Usuario, on_delete=models.CASCADE)
 	id_investimento = models.ForeignKey(Investimento, on_delete=models.CASCADE)
 	id_despesa   	= models.ForeignKey(Despesa, on_delete=models.CASCADE)
 	saldo			= models.FloatField()
