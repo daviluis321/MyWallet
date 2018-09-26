@@ -8,7 +8,7 @@ class Usuario(models.Model):
 	email = models.EmailField(max_length=80, unique=True)
 
 	def __str__(self):
-		return self.name
+		return self.nome
 
 class TipoInvestimento(models.Model):
 	tipo = models.CharField(max_length=30)
