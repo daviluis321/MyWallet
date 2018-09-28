@@ -3,14 +3,13 @@ from django.db import models
 
 class TipoInvestimento(models.Model):
 	tipo = models.CharField(max_length=30)
-
 	def __str__(self):
 		return self.name
 
 class Moeda(models.Model):
-	nome = models.CharField(max_length=10,blank=True,default='DEFAULT VALUE')
+	nome = models.CharField(max_length=10,unique=True,blank=False)
 	def __str__(self):
-		return self.name
+		return self.nome
 
 class Investimento(models.Model):
 	id_usuario 			= models.ForeignKey(User, on_delete=models.CASCADE)
