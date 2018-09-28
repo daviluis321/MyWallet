@@ -24,8 +24,8 @@ class Moeda(models.Model):
 
 class Investimento(models.Model):
 	id_usuario 			= models.ForeignKey(User, on_delete=models.CASCADE)
-	id_tipoInvestimento = models.ForeignKey(TipoInvestimento, on_delete=models.CASCADE)
-	id_moeda			= models.ForeignKey(Moeda, on_delete=models.CASCADE)
+	#id_tipoInvestimento = models.ForeignKey(TipoInvestimento, on_delete=models.CASCADE)
+	#id_moeda			= models.ForeignKey(Moeda, on_delete=models.CASCADE)
 	capital    			= models.FloatField()
 	criacao    			= models.DateField(auto_now=False, auto_now_add=False)
 
@@ -38,15 +38,17 @@ class TipoDespesa(models.Model):
 	def __str__(self):
 		return self.name
 
+
 class Despesa(models.Model):
-	id_usuario	   = models.ForeignKey(User, on_delete=models.CASCADE)
-	id_tipoDespesa = models.ForeignKey(TipoDespesa, on_delete=models.CASCADE)
-	id_moeda	   = models.ForeignKey(Moeda, on_delete=models.CASCADE)
-	custo     	   = models.FloatField()
-	criacao    	   = models.DateField(auto_now=False, auto_now_add=False)
+	#id_usuario	   = models.ForeignKey(User, on_delete=models.CASCADE)
+	#id_tipoDespesa = models.ForeignKey(TipoDespesa, on_delete=models.CASCADE)
+	#id_moeda	   = models.ForeignKey(Moeda, on_delete=models.CASCADE)
+	#custo     	   = models.FloatField()
+	#criacao    	   = models.DateField(auto_now=False, auto_now_add=False)
 
 	def __str__(self):
 		return self.name
+	
 
 
 
@@ -64,7 +66,7 @@ class Meta(models.Model):
 
 class Fundo(models.Model):
 	id_usuario   	= models.ForeignKey(User, on_delete=models.CASCADE)
-	id_investimento = models.ForeignKey(Investimento, on_delete=models.CASCADE)p
+	id_investimento = models.ForeignKey(Investimento, on_delete=models.CASCADE)
 	id_despesa   	= models.ForeignKey(Despesa, on_delete=models.CASCADE)
 	saldo			= models.FloatField()
 	
