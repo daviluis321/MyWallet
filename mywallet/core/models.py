@@ -13,10 +13,10 @@ class Moeda(models.Model):
 
 class Investimento(models.Model):
 	id_usuario 			= models.ForeignKey(User, on_delete=models.CASCADE)
-	#id_tipoInvestimento = models.ForeignKey(TipoInvestimento, on_delete=models.CASCADE)
-	#id_moeda			= models.ForeignKey(Moeda, on_delete=models.CASCADE)
-	capital    			= models.FloatField()
-	criacao    			= models.DateField(auto_now=False, auto_now_add=False)
+	id_tipoInvestimento = models.ForeignKey(TipoInvestimento, on_delete=models.CASCADE,null=True,blank=True)
+	id_moeda = models.ForeignKey(Moeda, on_delete=models.CASCADE,null=True,blank=True)
+	capital = models.FloatField()
+	criacao = models.DateField(auto_now=False, auto_now_add=False)
 
 	def __str__(self):
 		return self.name
