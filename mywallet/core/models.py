@@ -4,10 +4,10 @@ from django.db import models
 class TipoInvestimento(models.Model):
 	tipo = models.CharField(max_length=30)
 	def __str__(self):
-		return self.name
+		return self.tipo
 
 class Moeda(models.Model):
-	nome = models.CharField(max_length=10,unique=True,blank=False)
+	nome = models.CharField(max_length=25,unique=True,blank=False)
 	def __str__(self):
 		return self.nome
 
