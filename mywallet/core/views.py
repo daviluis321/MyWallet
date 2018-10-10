@@ -13,6 +13,9 @@ def contato(request):
 def main(request):
     return render(request, 'main.html')
 
+def recuperaSenha(request):
+    return render(request, 'recuperaSenha.html')
+
 def investimento(request):
     return render(request, 'investimento.html')
 
