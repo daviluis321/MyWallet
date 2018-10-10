@@ -7,14 +7,14 @@ def home(request):
 def login(request):
     return render(request, 'login.html')
 
-def recuperaSenha(request):
-    return render(request, 'recuperaSenha.html')
-
 def contato(request):
     return render(request, 'contato.html')
 
 def main(request):
     return render(request, 'main.html')
+
+def recuperaSenha(request):
+    return render(request, 'recuperaSenha.html')
 
 def investimento(request):
     return render(request, 'investimento.html')
