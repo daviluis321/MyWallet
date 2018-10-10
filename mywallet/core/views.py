@@ -7,6 +7,9 @@ def home(request):
 def login(request):
     return render(request, 'login.html')
 
+def recuperaSenha(request):
+    return render(request, 'recuperaSenha.html')
+
 def contato(request):
     return render(request, 'contato.html')
 
