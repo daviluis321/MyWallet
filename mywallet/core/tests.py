@@ -46,11 +46,6 @@ class LoginTests(TestCase):
             view = resolve('/login')
             self.assertEquals(view.func, login)
 
-class RecuperaSenhaTests(TestCase):
-    def test_home_url_resolves_home_view(self):
-            view = resolve('/recuperaSenha')
-            self.assertEquals(view.func, recuperaSenha)
-
 class ContatoTests(TestCase):
     def test_home_url_resolves_home_view(self):
             view = resolve('/contato')
