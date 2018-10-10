@@ -1,7 +1,6 @@
 from django.contrib import admin
 from .models import *
 
-admin.site.register(Usuario)
 admin.site.register(TipoInvestimento)
 admin.site.register(Moeda)
 admin.site.register(Investimento)
