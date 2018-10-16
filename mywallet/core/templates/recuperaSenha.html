@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block principal %}
+
+  <br>
+  <br>
+  <h1 class="text-center">Recupere sua senha</h1>
+  <br>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="row justify-content-center">
+          <a>Insira seu email para envio do código de recuperação</a>
+          <br><br>
+        </div>
+        <div class="input-group">
+          <label class="input-group input-group-addon">
+            <b class="glyphicon glyphicon-user"></b>
+          </label>
+          <input autofocus type="text" class="form-control" id="cmpLogin" placeholder="Email">
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <button type="button" class="btn btn-purple btn-lg  mx-2 px-5 py-1">Enviar</button>
+      </div>
+    </div>
+
+    <br>
+  </div>
+{% endblock %}
