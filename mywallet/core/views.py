@@ -19,5 +19,8 @@ def investimento(request):
 def despesa(request):
     return render(request, 'despesa.html')
 
+def cadastro(request):
+    return render(request, 'cadastro.html')
+
 def qsomos(request):
     return  render (request, 'qsomos.html')
