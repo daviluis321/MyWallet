@@ -6,10 +6,20 @@ class TipoInvestimento(models.Model):
 	def __str__(self):
 		return self.tipo
 
+	class Meta:
+		verbose_name = "Tipo de Investimento"
+		verbose_name_plural = "Tipos de Investimentos"
+		ordering = ["tipo"]
+
 class Moeda(models.Model):
 	nome = models.CharField(max_length=25,null=True,blank=True)
 	def __str__(self):
 		return self.nome
+
+	class Meta:
+		verbose_name = "Moeda"
+		verbose_name_plural = "Moedas"
+		ordering = ["nome"]
 
 class Investimento(models.Model):
 	nome = models.CharField(max_length=25,null=True,blank=True)
@@ -22,11 +32,21 @@ class Investimento(models.Model):
 	def __str__(self):
 		return self.nome
 
+	class Meta:
+		verbose_name = "Investimento"
+		verbose_name_plural = "Investimentos"
+		ordering = ["nome"]
+
 class TipoDespesa(models.Model):
 	tipo = models.CharField(max_length=30)
 
 	def __str__(self):
 		return self.tipo
+
+	class Meta:
+		verbose_name = "Tipo de Depesa"
+		verbose_name_plural = "Tipos de Despesas"
+		ordering = ["tipo"]
 
 class Despesa(models.Model):
 	nome = models.CharField(max_length=25,null=True,blank=True)
@@ -38,6 +58,11 @@ class Despesa(models.Model):
 
 	def __str__(self):
 		return self.nome
+	
+	class Meta:
+		verbose_name = "Despesa"
+		verbose_name_plural = "Despesas"
+		ordering = ["nome"]
 	
 class Meta(models.Model):
 	nome = models.CharField(max_length=25,null=True,blank=True)
@@ -51,7 +76,12 @@ class Meta(models.Model):
 
 	def __str__(self):
 		return self.nome
-
+	
+	class Meta:
+		verbose_name = "Meta"
+		verbose_name_plural = "Metas"
+		ordering = ["nome"]
+	
 class Fundo(models.Model):
 	nome = models.CharField(max_length=25,null=True,blank=True)
 	id_usuario = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -61,3 +91,8 @@ class Fundo(models.Model):
 
 	def __str__(self):
 		return self.nome
+
+	class Meta:
+		verbose_name = "Fundo"
+		verbose_name_plural = "Fundos"
+		ordering = ["nome"]
