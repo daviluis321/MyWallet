@@ -9,37 +9,24 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6">
-        <div class="input-group">
-          <label class="input-group input-group-addon">
-            <b class="glyphicon glyphicon-user"></b>
-          </label>
-          <input autofocus type="text" class="form-control" id="cmpLogin" placeholder="Usuário">
-        </div>
+        <form method="post" novalidate>
+              {% csrf_token %}
+              {% include 'includes/form.html' %}
+              <div class="row justify-content-center">
+                <div class="col-md-6 text-right" style="height: 100%;min-height: 100%;display: -webkit-flex;display: flex;-webkit-align-items: center;align-items: center;-webkit-justify-content: center;justify-content: center;">
+                  <button type="submit" class="btn btn-purple btn-lg  mx-2 px-5 py-1">Login</button> <br>      
+                </div>
+              </div>
+            </form>
       </div>
     </div>
     <br>
-
-    <div class="row justify-content-center">
-      <div class="col-md-6 ">
-        <div class="input-group">
-          <label class="input-group input-group-addon">
-            <b class="glyphicon glyphicon-log-in"></b>
-          </label>
-          <input type="password" class="form-control" id="cmpSenha" placeholder="Senha">
-        </div>
-      </div>
-    </div>
     <br>
     <div class="row justify-content-center">
       <div class="col-md-6 text-right" style="height: 100%;min-height: 100%;display: -webkit-flex;display: flex;-webkit-align-items: center;align-items: center;-webkit-justify-content: center;justify-content: center;">
-        <button type="button" class="btn btn-purple btn-lg  mx-2 px-5 py-1">Login</button> <br>      
+        <a href="#">Esqueceu sua senha?</a>
       </div>
     </div>
-        <div class="row justify-content-center">
-      <div class="col-md-6 text-right" style="height: 100%;min-height: 100%;display: -webkit-flex;display: flex;-webkit-align-items: center;align-items: center;-webkit-justify-content: center;justify-content: center;">
-          <a href="#">Esqueceu sua senha?</a>
-        </div>
-</div>
     <br>
   </div>
   <br>
