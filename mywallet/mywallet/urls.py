@@ -21,7 +21,7 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('',views.home, name='home'),
-    path(r'^login/$', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
+    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path('cadastro/',accounts_views.cadastro,name='cadastro'),
     path('contato/',views.contato, name='contato'),
     path('admin/', admin.site.urls),
