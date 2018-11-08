@@ -1,4 +1,8 @@
 
+.text-muted{
+	display: none;
+}
+
 body{
     padding-top: 75px;
 }

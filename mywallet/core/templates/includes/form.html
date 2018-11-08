@@ -10,27 +10,29 @@
 
 {% for field in form %}
   <div class="form-group">
-    {{ field.label_tag }}
-
-    {% if form.is_bound %}
-      {% if field.errors %}
-        {% render_field field class="form-control is-invalid" %}
-        {% for error in field.errors %}
-          <div class="invalid-feedback">
-            {{ error }}
-          </div>
-        {% endfor %}
-      {% else %}
-        {% render_field field class="form-control is-valid" %}
-      {% endif %}
-    {% else %}
-      {% render_field field class="form-control" %}
-    {% endif %}
-
-    {% if field.help_text %}
-      <small class="form-text text-muted">
-        {{ field.help_text|safe }}
-      </small>
-    {% endif %}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+            {{ field.label_tag }}
+        </div>
+        <div class="col-md-9">
+            {% if form.is_bound %}
+              {% if field.errors %}
+                {% render_field field class="form-control is-invalid " %}
+                {% for error in field.errors %}
+                  <div class="invalid-feedback">
+                   {{ error }}
+                  </div>
+                {% endfor %}
+            {% else %}
+              {% render_field field class="form-control  is-valid" %}
+            {% endif %}
+            {% else %}
+              {% render_field field class="form-control" %}
+            {% endif %}   
+        </div>
+      </div>
+    </div>
+  
   </div>
 {% endfor %}
