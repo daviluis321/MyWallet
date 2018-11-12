@@ -36,7 +36,7 @@
        
           {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link textWallet" href="">Sair</a>
+            <a class="nav-link textWallet" href="{% url 'logout' %}">Sair</a>
           </li>
           <li class="nav-item">
             <a class=" btn btn-outline-light ml-md-2 textWallet" href="inscricao.html">{{user}}</a>
@@ -44,7 +44,7 @@
 
           {% else %}
           <li class="nav-item">
-            <a href="{% url 'login' %}">Login</a>
+            <a class="nav-link textWallet" href="{% url 'login' %}">Login</a>
           </li>
           <li class="nav-item">
             <a class=" btn btn-outline-light ml-md-2 textWallet" href="{% url 'cadastro' %}">Cadastra-se</a>
