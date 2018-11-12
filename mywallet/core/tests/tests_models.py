@@ -5,7 +5,7 @@ import datetime
 #export DJANGO_SETTINGS_MODULE=core.settings.__init__
 from core.models import Investimento, TipoInvestimento, Moeda, Meta, Despesa, Fundo, TipoDespesa, Fundo
 
-class BancoTestsTamanho(TestCase):
+class CoreTestsModel(TestCase):
     def setUp(self):
         self.usuario, novo = User.objects.get_or_create(username='admin')
         self.tipo_investimento, novo = TipoInvestimento.objects.get_or_create(tipo='tipo')

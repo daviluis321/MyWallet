@@ -1,6 +1,6 @@
 from django.urls import reverse
 from django.test import TestCase
-class HomeTests(TestCase):
+class CoreTestsView(TestCase):
     def test_home_view_status_code(self):
         url = reverse('home')
         response = self.client.get(url)
@@ -25,3 +25,4 @@ class HomeTests(TestCase):
         url = reverse('qsomos')
         response = self.client.get(url)
         self.assertEquals(response.status_code, 200)
+
