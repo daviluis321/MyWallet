@@ -3,10 +3,15 @@ from django.urls import reverse, resolve
 
 
 class  AccountsTestsView(TestCase):
-    def test_home_view_status_code(self):
+    def test_cadastro_view_status_code(self):
         url = reverse('cadastro')
         response = self.client.get(url)
         self.assertEquals(response.status_code, 200)
+
+    def test_logout_view_status_code(self):
+        url = reverse('logout')
+        response = self.client.get(url)
+        self.assertEquals(response.status_code, 302)
 
     #def test_home_url_resolves_home_view(self):
     #   view = resolve('/cadastro')
