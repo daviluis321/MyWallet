@@ -4,7 +4,7 @@ from core.views import home,contato, main, investimento, despesa, qsomos
 from accounts.views import cadastro
 from django.contrib.auth import views as auth_views
 
-class CoreReturnUrl(TestCase):
+class CoreReturnTemplate(TestCase):
     def setUp(self):
         self.client = Client()
         self.login = reverse('login')
