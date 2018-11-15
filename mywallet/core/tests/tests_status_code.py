@@ -20,9 +20,20 @@ class CoreStatus(TestCase):
         url = reverse('contato')
         response = self.client.get(url)
         self.assertEquals(response.status_code, 200)
+
+    def test_investimento_status_code(self):
+        url = reverse('investimento')
+        response = self.client.get(url)
+        self.assertEquals(response.status_code, 200)
+        
+    def test_despesa_status_code(self):
+        url = reverse('despesa')
+        response = self.client.get(url)
+        self.assertEquals(response.status_code, 200)
   
     def test_quem_somos_status_code(self):
         url = reverse('qsomos')
         response = self.client.get(url)
         self.assertEquals(response.status_code, 200)
 
+    
