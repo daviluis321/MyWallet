@@ -2,47 +2,10 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from django.test import TestCase
 import datetime
-from .models import Investimento, TipoInvestimento, Moeda, Meta, Despesa, Fundo, TipoDespesa, Fundo
+#export DJANGO_SETTINGS_MODULE=core.settings.__init__
+from core.models import Investimento, TipoInvestimento, Moeda, Meta, Despesa, Fundo, TipoDespesa, Fundo
 
-from django.test import TestCase
-from .views import home
-from .views import login
-from .views import contato
-from .views import main
-from .views import investimento
-from .views import despesa
-from .views import qsomos
-
-class HomeTests(TestCase):
-    def test_home_view_status_code(self):
-        url = reverse('home')
-        response = self.client.get(url)
-        self.assertEquals(response.status_code, 200)
-
-   # def test_home_url_resolves_home_view(self):
-    #        view = resolve('/')
-    #        self.assertEquals(view.func, home)
-
-    def test_login_view_status_code(self):
-        url = reverse('login')
-        response = self.client.get(url)
-        self.assertEquals(response.status_code, 200)
-    
-    def test_main_view_status_code(self):
-        url = reverse('main')
-        response = self.client.get(url)
-        self.assertEquals(response.status_code, 200)
-
-    def test_contato_view_status_code(self):
-        url = reverse('contato')
-        response = self.client.get(url)
-        self.assertEquals(response.status_code, 200)
-  
-    def test_quem_somos_view_status_code(self):
-        url = reverse('qsomos')
-        response = self.client.get(url)
-        self.assertEquals(response.status_code, 200)
-class BancoTests(TestCase):
+class CoreTestsModel(TestCase):
     def setUp(self):
         self.usuario, novo = User.objects.get_or_create(username='admin')
         self.tipo_investimento, novo = TipoInvestimento.objects.get_or_create(tipo='tipo')
@@ -57,11 +20,11 @@ class BancoTests(TestCase):
         print('fdsfsd',self.usuario)
     def tearDown(self):
         pass
-    def testes(self):
-        self.assertEquals(1+1,2)
+    def testeTmoeda(self):
         self.assertEquals(Moeda.objects.count(),1)
+    def testeTtipoinvestimento(self):
         self.assertEquals(TipoInvestimento.objects.count(),1)
+    def testeTinvestimento(self):    
         self.assertEquals(Investimento.objects.count(),1)
+    def testeTmeta(self):    
         self.assertEquals(Meta.objects.count(),1)
-
-
