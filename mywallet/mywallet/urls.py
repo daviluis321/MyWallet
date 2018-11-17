@@ -23,7 +23,7 @@ from django.conf.urls import url, include
 urlpatterns = [
     path('',views.home, name='home'),
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
-    path('logout', auth_views.LogoutView.as_view(), name='logout'),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('cadastro/',accounts_views.cadastro,name='cadastro'),
     path('contato/',views.contato, name='contato'),
     path('admin/', admin.site.urls),

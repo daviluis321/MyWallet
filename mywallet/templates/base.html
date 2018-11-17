@@ -39,7 +39,7 @@
             <a class="nav-link textWallet" href="{% url 'logout' %}">Sair</a>
           </li>
           <li class="nav-item">
-            <a class=" btn btn-outline-light ml-md-2 textWallet" href="inscricao.html">{{user}}</a>
+            <a class=" btn btn-outline-light ml-md-2 textWallet" href="/cadastro">{{user}}</a>
           </li>
 
           {% else %}
@@ -69,16 +69,16 @@
           <h4>PÁGINAS</h4>
           <ul class="list-unstyled">
             <li>
-              <a href="planos.html">Quem somos</a>
+              <a href="/qsomos/">Quem somos</a>
             </li>
             <li>
-              <a href="contato.html">Contato</a>
+              <a href="/contato/">Contato</a>
             </li>
             <li>
-              <a href="inscricao.html">Cadastra-se</a>
+              <a href="/cadastro/">Cadastra-se</a>
             </li>
             <li>
-              <a href="contato.html">Login</a>
+              <a href="/login/">Login</a>
             </li>
           </ul>
         </div>
