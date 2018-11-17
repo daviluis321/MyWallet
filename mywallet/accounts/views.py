@@ -14,7 +14,9 @@ def cadastro(request):
     else:
         form =SignUpForm()
     return render(request, 'cadastro.html', {'form': form})
-
+    
+def delete_page(request):
+    return render(request, 'excluir_usuario.html')
 
 def delete(request, username):
     
@@ -24,7 +26,7 @@ def delete(request, username):
         messages.sucess(request, "Usuário excluído")
     except User.DoesNotExist:
        messages.error(request, "Usuario nao encontrado")
-       return redirect('home')
+       return redirect('main.html')
     except Exception as e:
-        return render(request, 'index.html',{'err':"Erro"})
-    return redirect('qsomos')
+        return render(request, 'excluir_usuario.html',{'err':"Erro"})
+    return redirect('main.html')
