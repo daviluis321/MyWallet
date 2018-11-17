@@ -16,7 +16,7 @@ def cadastro(request):
     return render(request, 'cadastro.html', {'form': form})
 
 
-def delete(request, username = "xcarol"):
+def delete(request, username):
     
     try:
         u = User.objects.get(username = username)
