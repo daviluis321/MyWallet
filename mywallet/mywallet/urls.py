@@ -29,5 +29,6 @@ urlpatterns = [
     path('main/',views.main, name='main'),
     path('investimento/',views.investimento, name='investimento'),
     path('despesa/',views.despesa, name='despesa'),
-    path('qsomos/',views.qsomos, name = 'qsomos')
+    path('qsomos/',views.qsomos, name = 'qsomos'),
+    path('delete/', accounts_views.delete, name='del_user')
 ]
