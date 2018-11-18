@@ -18,6 +18,7 @@ from django.urls import path
 from core import views
 from accounts import views as accounts_views
 from django.contrib.auth import views as auth_views
+from django.conf.urls import url, include
 
 urlpatterns = [
     path('',views.home, name='home'),
@@ -32,4 +33,9 @@ urlpatterns = [
     path('qsomos/',views.qsomos, name = 'qsomos'),
     path('delete_page/', accounts_views.delete_page, name='delete_page'),
     path('delete/<username>', accounts_views.delete, name='delete'),
+    url(r'password_reset/$',auth_views.PasswordResetView.as_view(template_name='password_reset.html'), name='password_reset'),
+    url(r'password_reset/done/',auth_views.PasswordResetDoneView.as_view(template_name='password_reset_done.html'), name='password_reset_done'),
+    url(r'reset/(?P<uidb64>[0-9A-Za-z]+)/(?P<token>.+)/$', auth_views.PasswordResetConfirmView.as_view(template_name='password_reset_confirm.html'), name='password_reset_confirm'),
+    url(r'reset/done/',auth_views.PasswordResetCompleteView.as_view(template_name='password_reset_complete.html'), name='password_reset_complete'),
+    url(r'^', include('django.contrib.auth.urls')),
 ]
