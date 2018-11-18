@@ -24,9 +24,10 @@ def delete(request, username):
         u = User.objects.get(username = username)
         u.delete()
         messages.sucess(request, "Usuário excluído")
+        return redirect('/home')
     except User.DoesNotExist:
        messages.error(request, "Usuario nao encontrado")
-       return redirect('index.html')
+       return redirect('/home')
     except Exception as e:
-        return render(request, 'excluir_usuario.html',{'err':"Erro"})
-    return redirect('index.html')
+        return render(request, 'index.html',{'err':"Erro"})
+    return redirect('/home')

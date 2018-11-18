@@ -10,13 +10,13 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <title>MyWallet!</title>
+  <a href="/"><title>MyWallet!</title></a>
 </head>
 
 <body>
 
   <nav class="navbar navbar-light bgWallet navbar-expand-md fixed-top py-3 shadow-sm">
-    <a href="index.html" class="navbar-brand font-weight-bold px-2 border border-dark text-white">
+    <a href="/" class="navbar-brand font-weight-bold px-2 border border-dark text-white">
       MyWallet
     </a>
 
@@ -39,7 +39,7 @@
             <a class="nav-link textWallet" href="{% url 'logout' %}">Sair</a>
           </li>
           <li class="nav-item">
-            <a class=" btn btn-outline-light ml-md-2 textWallet" href="inscricao.html">{{user}}</a>
+            <a class=" btn btn-outline-light ml-md-2 textWallet" href="/main">{{user}}</a>
           </li>
 
           {% else %}
@@ -47,7 +47,7 @@
             <a class="nav-link textWallet" href="{% url 'login' %}">Login</a>
           </li>
           <li class="nav-item">
-            <a class=" btn btn-outline-light ml-md-2 textWallet" href="{% url 'cadastro' %}">Cadastra-se</a>
+            <a class=" btn btn-outline-light ml-md-2 textWallet" href="{% url 'cadastro' %}">Cadastre-se</a>
           </li>
           {% endif %}
         
