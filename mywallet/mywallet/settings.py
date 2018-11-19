@@ -42,6 +42,10 @@ INSTALLED_APPS = [
     'core',
 ]
 
+#aqui
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#ate aqui
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
