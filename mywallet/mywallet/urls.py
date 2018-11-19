@@ -27,7 +27,7 @@ urlpatterns = [
     path('cadastro/',accounts_views.cadastro,name='cadastro'),
     path('contato/',views.contato, name='contato'),
     path('admin/', admin.site.urls),
-    path('main/',views.main, name='main'),
+    path('main/',views.index, name='main'),
     path('investimento/',views.investimento, name='investimento'),
     path('despesa/',views.despesa, name='despesa'),
     path('qsomos/',views.qsomos, name = 'qsomos'),
