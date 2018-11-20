@@ -98,3 +98,6 @@ local_settings.py
 */__pycache__/
 
 .env
+
+## Vs Code ##
+.vscode
