@@ -1,4 +1,8 @@
 
+.text-muted{
+	display: none;
+}
+
 body{
     padding-top: 75px;
 }
@@ -53,20 +57,25 @@ body{
 
 .btn-purple {
     color: #fff;
-    background-color: #9064F6;
+    background-color:#9064F6;
     border-color: #9064F6;
 }
 
 .btn-purple:hover{
-	background-color:#4B347F;
-	color:white;
+	background-color:white;
+	color:#4B347F;
 }
+
+.list-group-item-purple{
+    color: white;
+    background-color: #9064F6;
+}
+
 
 #mensagemc{
 	margin-top: 0px;
 	height: 120px;
 	resize: vertical;
-
 }
 
 @media (max-width: 739px){
@@ -78,4 +87,3 @@ body{
 #titulos{
 	color: white;
 }
-

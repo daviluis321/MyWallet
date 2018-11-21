@@ -10,7 +10,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <title>MyWallet!</title>
+  <a href="/"><title>MyWallet!</title></a>
 </head>
 
 <body>
@@ -33,17 +33,29 @@
         <li class="nav-item">
           <a class="nav-link textWallet" href="/contato">Contato</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link textWallet" href="/login" >Login</a>
-        </li>
-        <li class="nav-item">
-          <a class=" btn btn-outline-light ml-md-2 textWallet" href="/inscricao">Cadastrar-se</a>
-        </li>
+       
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link textWallet" href="{% url 'logout' %}">Sair</a>
+          </li>
+          <li class="nav-item">
+            <a class=" btn btn-outline-light ml-md-2 textWallet" href="/main">{{user}}</a>
+          </li>
+
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link textWallet" href="{% url 'login' %}">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class=" btn btn-outline-light ml-md-2 textWallet" href="{% url 'cadastro' %}">Cadastre-se</a>
+          </li>
+          {% endif %}
+        
       </ul>
     </div>
   </nav>
 
-  {% block  principal %}<br><br>{% endblock %}
+  {% block  principal %} {% endblock %}
 
   <footer style=" 
                   left: 0;
@@ -57,16 +69,16 @@
           <h4>PÁGINAS</h4>
           <ul class="list-unstyled">
             <li>
-              <a href="/planos">Quem somos</a>
+              <a href="planos.html">Quem somos</a>
             </li>
             <li>
-              <a href="/contato">Contato</a>
+              <a href="contato.html">Contato</a>
             </li>
             <li>
-              <a href="/inscricao">Cadastra-se</a>
+              <a href="inscricao.html">Cadastra-se</a>
             </li>
             <li>
-              <a href="/login">Login</a>
+              <a href="contato.html">Login</a>
             </li>
           </ul>
         </div>

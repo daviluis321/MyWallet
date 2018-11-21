@@ -18,6 +18,10 @@ def cadastro(request):
 def delete_page(request):
     return render(request, 'excluir_usuario.html')
 
+def alterar_page(request,username):
+    username = username
+    return render(request, 'alterar_cadastro.html')
+
 def delete(request, username):
     
     try:
