@@ -4,6 +4,7 @@ from django.views.generic import (
     CreateView, TemplateView, UpdateView, FormView
 )
 from django.contrib.auth.mixins import LoginRequiredMixin
+from core.models import TipoDespesa
 
 # Create your views here.
 def home(request):
@@ -27,6 +28,10 @@ def investimento(request):
 
 def despesa(request):
     return render(request, 'despesa.html')
+
+def cadastrar_despesa(request):
+    tipo_despesas = TipoDespesa.objects.all()
+    return render(request, 'cadastrar_despesa.html',{'tipo_depesas': tipo_despesas})
 
 def qsomos(request):
     return  render (request, 'qsomos.html')

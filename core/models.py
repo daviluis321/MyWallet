@@ -38,15 +38,16 @@ class Investimento(models.Model):
 		ordering = ["nome"]
 
 class TipoDespesa(models.Model):
-	tipo = models.CharField(max_length=30)
+	nome = models.CharField(max_length=30)
 
 	def __str__(self):
-		return self.tipo
+		return self.nome
 
 	class Meta:
 		verbose_name = "Tipo de Depesa"
 		verbose_name_plural = "Tipos de Despesas"
-		ordering = ["tipo"]
+		ordering = ["nome"]
+
 
 class Despesa(models.Model):
 	nome = models.CharField(max_length=25,null=True,blank=True)

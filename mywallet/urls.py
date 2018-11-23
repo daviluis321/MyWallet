@@ -30,6 +30,7 @@ urlpatterns = [
     path('main/',views.index, name='main'),
     path('investimento/',views.investimento, name='investimento'),
     path('despesa/',views.despesa, name='despesa'),
+    path('cadastrar_despesa/',views.cadastrar_despesa, name='cadastrar_despesa'),
     path('qsomos/',views.qsomos, name = 'qsomos'),
     path('alterar_page/', accounts_views.alterar_page, name='alterar_page'),
     path('delete_page/', accounts_views.delete_page, name='delete_page'),

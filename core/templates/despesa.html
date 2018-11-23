@@ -1,71 +1,38 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block principal %}
-  <br>
-  <br>
-  <div class="principal" id="unica">
-    <div class="container py-4">
-      <div class="row">
-        <div class="col-md-3 col-6">
-          <ul id="oi" class="list-unstyled">
-           <li>
-              <a class="btn btn-purple mb-2 btn-sm btn-block" href="#" style="padding-top: 4%;max-width:80%;min-height: 40px;font-family: Helvetica">
-                 Imóveis
-              </a>
-            </li>
-            <li>
-              <a class="btn btn-purple mb-2 btn-sm btn-block" href="#" style="padding-top: 4%;max-width:80%;min-height: 40px;font-family: Helvetica">
-                Automóvel
-              </a>
-            </li>
-            <li>
-              <a class="btn btn-purple mb-2 btn-sm btn-block" href="#" style="padding-top: 4%;max-width:80%;min-height: 40px;font-family: Helvetica">
-                Viagem
-              </a>
-            </li>
-            
-          </ul>
-        </div>
-        <div class="col-md-1 col-1"></div>
-        <div class="col-md-5 col-5">
-          <form class="form-horizontal" role="form">
-            <div class="form-group">
-              <label for="inputEmail3" class="col-sm-12 control-label">Nome da Despesa</label>
-              <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputEmail3" placeholder="Ex.: Viagem">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputPassword3" class="col-sm-12 control-label">Valor da Despesa</label>
-              <div class="col-sm-5">
-                <input type="number" class="form-control" id="inputPassword3" placeholder="R$">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputEmail3" class="col-sm-12 control-label">Descrição</label>
-              <div class="col-sm-12">
-                <textarea class="form-control" rows="5" id="comment"></textarea>
-              </div>
-            </div>
-          
-            <div class="form-group">
-              <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default">Cadastrar</button>
-              </div>
-            </div>
-          </form>
-          <div class="col-md-6 col-6"></div>
-          <div class="col-md-12 col-12">
-
-          </div>
-        </div>
+{% extends "base.html" %} {% load static %} {% block principal %}
+<br>
+<br>
+<div class="principal" id="unica">
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-md-3 col-6">
+        <ul class="list-group ">
+          <li class="list-group-item list-group-item-purple">Meus Investimentos</li>
+          <li class="list-group-item list-group-item-purple"> Minhas Despesas</li>
+          <li class="list-group-item list-group-item-purple"> Meus Relatórios</li>
+          <li class="list-group-item list-group-item-purple">Minhas Metas</li>
+          <li class="list-group-item list-group-item-purple">
+            <a class="text-white" style="text-decoration: none;" href="/alterar_page/{{user}}">Alterar cadastro</a>
+          </li>
+          <li class="list-group-item list-group-item-purple">
+            <a class="text-white" style="text-decoration: none;" href="/delete_page">Excluir cadastro</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-1 col-2">
+      </div>
+      <div class="col-md-8 col-8">
+        <h1>Despesas do {{user}} </h1>
+        <br>  
+        <p class="lead">Nenhuma despesa Cadastrada</p>
+        <p class="lead">Saldo anterior: R$ 0,00</p>  
+        <p class="lead">Entradas: R$ 0,00 </p> 
+        <p class="lead">Saídas:  R$ 0,00</p>  
+        <p class="lead">Resultado:  R$ 0,00</p> 
+        <a class="btn btn-purple" href="{%url 'cadastrar_despesa' %}">Cadastrar Despesa</a>
       </div>
     </div>
   </div>
+</div>
+</section>
 
-  <br>
-
-  </section>
-
-  {% endblock %}
+{% endblock %}
