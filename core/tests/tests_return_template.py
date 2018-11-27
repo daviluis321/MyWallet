@@ -40,3 +40,23 @@ class CoreReturnTemplate(TestCase):
     def test__url_qsomos(self):
         view = resolve('/qsomos/')
         self.assertEquals(view.func, qsomos)
+
+    def test__url_password_reset(self):
+        response = self.client.get(self.password_reset)
+        self.assertTemplateUsed(response, 'password_reset.html')
+
+    def test__url_password_reset_complete(self):
+        response = self.client.get(self.password_reset_complete)
+        self.assertTemplateUsed(response, 'password_reset_complete.html')
+
+    def test__url_password_reset_confirm(self):
+        response = self.client.get(self.password_reset_confirm)
+        self.assertTemplateUsed(response, 'password_reset_confirm.html')
+
+    def test__url_password_reset_done(self):
+        response = self.client.get(self.password_reset_done)
+        self.assertTemplateUsed(response, 'password_reset_done.html')
+
+    def test__url_password_reset_email(self):
+        response = self.client.get(self.password_reset_email)
+        self.assertTemplateUsed(response, 'password_reset_email.html')
